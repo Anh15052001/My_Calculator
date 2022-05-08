@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     String pheptoan;
     boolean checkdot = false;
     boolean checkbang = false;
-    double so1, so2, ketqua;
+    int so1, so2, ketqua;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
                     workingstv.setText("0 + ");
                 }
                 else {
-                    so1 = Double.parseDouble(resultstv.getText()+"");
+                    so1 = Integer.parseInt(resultstv.getText()+"");
                     workingstv.setText(resultstv.getText().toString()+" + ");
                     resultstv.setText("");
                     tinhtoan = "";
@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
                     workingstv.setText("0 - ");
                 }
                 else {
-                    so1 = Double.parseDouble(resultstv.getText()+"");
+                    so1 = Integer.parseInt(resultstv.getText()+"");
                     workingstv.setText(resultstv.getText().toString()+ " - ");
                     resultstv.setText("");
                     tinhtoan = "";
@@ -184,7 +184,7 @@ public class MainActivity extends AppCompatActivity {
                     workingstv.setText("0 x ");
                 }
                 else {
-                    so1 = Double.parseDouble(resultstv.getText()+"");
+                    so1 = Integer.parseInt(resultstv.getText()+"");
                     workingstv.setText(resultstv.getText().toString()+" x ");
                     resultstv.setText("");
                     tinhtoan = "";
@@ -203,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
                     workingstv.setText("0 / ");
                 }
                 else {
-                    so1 = Double.parseDouble(resultstv.getText()+"");
+                    so1 = Integer.parseInt(resultstv.getText()+"");
                     workingstv.setText(resultstv.getText().toString()+" / ");
                     resultstv.setText("");
                     tinhtoan = "";
@@ -223,12 +223,12 @@ public class MainActivity extends AppCompatActivity {
                 {
                     checkdot = false;
                     tinhtoan = resultstv.getText().toString();
-                    so2 = Double.parseDouble(resultstv.getText()+"");
+                    so2 = Integer.parseInt(resultstv.getText()+"");
                     workingstv.setText(workingstv.getText().toString()+resultstv.getText().toString()+"");
                     resultstv.setText("");
                     if (pheptoan=="")
                     {
-                        ketqua = Double.parseDouble(tinhtoan);
+                        ketqua = Integer.parseInt(tinhtoan);
                     }
                     if(pheptoan=="+")
                     {
